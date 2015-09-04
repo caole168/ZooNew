@@ -13,21 +13,29 @@ class DetailViewController: UIViewController {
     
     var ReceiveUrl:NSString!
     var LoadUrl:NSString!
+    var PageTitle:NSString!
     
 
     @IBOutlet weak var WebView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        println(ReceiveUrl)
-        println(LoadUrl)
-        LoadUrl = ReceiveUrl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         
+        println(PageTitle)
+        println(ReceiveUrl)
+        
+        
+        
+        self.navigationItem.title = "\(PageTitle)"
+        var Screen = UIScreen.mainScreen().bounds
+        var ScreenWidth = Screen.width
+        var ScreenHeight = Screen.height
+        
+        LoadUrl = ReceiveUrl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        WebView.frame = CGRectMake(0, 20, ScreenWidth, ScreenHeight)
         WebView.reload()
         WebView.reloadInputViews()
-        println(ReceiveUrl)
-        println(LoadUrl)
+
         //     browserView.loadRequest(b)
         WebView.loadRequest(NSURLRequest(URL:NSURL(string: "http://\(LoadUrl)")! ) )
    
