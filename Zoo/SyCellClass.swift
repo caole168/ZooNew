@@ -23,17 +23,9 @@ class SyTableViewCell: UITableViewCell {
         // Configure the view for the selected state
         
         
-        
-        
-        
     }
     
-    
-    @IBOutlet weak var SyContentImage: UIImageView!
-    @IBOutlet weak var SyContentTitle: UILabel!
-    @IBOutlet weak var SyContentTime:  UILabel!
-    @IBOutlet weak var SyContentCount: UILabel!
-
+  
     
 }
 

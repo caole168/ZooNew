@@ -11,6 +11,7 @@
 		5E4C69491B982B9E00F3468C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C69481B982B9E00F3468C /* Images.xcassets */; };
 		5E4C694C1B982B9E00F3468C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C694A1B982B9E00F3468C /* LaunchScreen.xib */; };
 		5E4C69581B982B9E00F3468C /* ZooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C69571B982B9E00F3468C /* ZooTests.swift */; };
+		B32642421B9A673400012C4E /* 屏幕尺寸 in Resources */ = {isa = PBXBuildFile; fileRef = B32642411B9A673400012C4E /* 屏幕尺寸 */; };
 		B3EBB0B41B9919360050B177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3EBB0B31B9919360050B177 /* Main.storyboard */; };
 		B3EBB0B61B99194B0050B177 /* SyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EBB0B51B99194B0050B177 /* SyViewController.swift */; };
 		B3EBB0B81B9919890050B177 /* SyPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3EBB0B71B9919890050B177 /* SyPlist.plist */; };
@@ -43,6 +44,7 @@
 		5E4C69511B982B9E00F3468C /* ZooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4C69561B982B9E00F3468C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E4C69571B982B9E00F3468C /* ZooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooTests.swift; sourceTree = "<group>"; };
+		B32642411B9A673400012C4E /* 屏幕尺寸 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "屏幕尺寸"; sourceTree = "<group>"; };
 		B3EBB0B31B9919360050B177 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B3EBB0B51B99194B0050B177 /* SyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyViewController.swift; sourceTree = "<group>"; };
 		B3EBB0B71B9919890050B177 /* SyPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SyPlist.plist; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				B3EBB0BB1B9919F30050B177 /* logo */,
 				5E4C69401B982B9E00F3468C /* Info.plist */,
 				B3EBB0B71B9919890050B177 /* SyPlist.plist */,
+				B32642411B9A673400012C4E /* 屏幕尺寸 */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				B3EBB0C51B991A3B0050B177 /* 4.jpeg in Resources */,
 				B3EBB0BC1B9919F30050B177 /* logo in Resources */,
 				B3EBB0C81B991A3B0050B177 /* 3.jpeg in Resources */,
+				B32642421B9A673400012C4E /* 屏幕尺寸 in Resources */,
 				5E4C694C1B982B9E00F3468C /* LaunchScreen.xib in Resources */,
 				B3EBB0C71B991A3B0050B177 /* 2.jpeg in Resources */,
 				5E4C69491B982B9E00F3468C /* Images.xcassets in Resources */,
