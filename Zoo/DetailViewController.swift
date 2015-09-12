@@ -8,12 +8,15 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController,UIWebViewDelegate {
 
     
     var ReceiveUrl:NSString!
     var LoadUrl:NSString!
     var PageTitle:NSString!
+    
+    var loadImage = UIActivityIndicatorView()
+    
     
 
     @IBOutlet weak var WebView: UIWebView!
@@ -23,6 +26,7 @@ class DetailViewController: UIViewController {
         
         println(PageTitle)
         println(ReceiveUrl)
+        
         
         
         
@@ -38,7 +42,7 @@ class DetailViewController: UIViewController {
 
         //     browserView.loadRequest(b)
         WebView.loadRequest(NSURLRequest(URL:NSURL(string: "http://\(LoadUrl)")! ) )
-   
+        WebView.delegate = self
   
         
      
@@ -50,6 +54,38 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+
+    
+    func webViewDidStartLoad(webView: UIWebView){
+        
+        let Screen = UIScreen.mainScreen().bounds
+        let ScreenWidth = Screen.width
+        let ScreenHeight = Screen.height
+    
+        
+
+        loadImage.frame = CGRectMake(ScreenWidth/2.3, ScreenHeight/2, 50, 50)
+        loadImage.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        self.view.addSubview(loadImage)
+        loadImage.startAnimating()
+        
+        //webview开始加载
+    
+    }
+    func webViewDidFinishLoad(webView: UIWebView){
+        
+        loadImage.stopAnimating()
+        loadImage.hidesWhenStopped = true
+        
+        //webview结束加载
+    }
+    
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError){
+        
+    }
+
 
     /*
     // MARK: - Navigation
