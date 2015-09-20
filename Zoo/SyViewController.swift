@@ -57,32 +57,38 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        var tableCell : SyTableViewCell = tableView.dequeueReusableCellWithIdentifier("SyCell") as! SyTableViewCell
+   //     var tableCell : SyTableViewCell = tableView.dequeueReusableCellWithIdentifier("SyCell") as! SyTableViewCell
         
-    
+        
+        let tableCell : SyTableViewCell = tableView.dequeueReusableCellWithIdentifier("SyCell", forIndexPath: indexPath) as! SyTableViewCell
+        
+        
+        
         //屏幕尺寸
         let Screen = UIScreen.mainScreen().bounds
         let ScreenWidth = Screen.width
         let ScreenHeight = Screen.height
+
         
         
+        
+            
         //cell元素
-        var SyContnetImage = UIImageView()
-        
-        var SyContentTitle = UILabel()
+        let SyContnetImage = UIImageView()
+        let SyContentTitle = UILabel()
         SyContentTitle.numberOfLines = 2
         SyContentTitle.lineBreakMode = NSLineBreakMode.ByWordWrapping
         SyContentTitle.textAlignment = NSTextAlignment.Justified
         
-        var SyContentTime = UILabel()
+        let SyContentTime = UILabel()
         SyContentTime.font = UIFont(name: "", size: 1)
         
         
         
         //加载数据
-        var dataRow = indexPath.row + 1 //数组元素从1开始的，所以+1 ，indexPath默认为0
-        var dataGroup = data["\(dataRow)"] as! NSDictionary
-        var ImageUrl = dataGroup["image"] as! NSString
+        let dataRow = indexPath.row + 1 //数组元素从1开始的，所以+1 ，indexPath默认为0
+        let dataGroup = data["\(dataRow)"] as! NSDictionary
+        let ImageUrl = dataGroup["image"] as! NSString
         
     
         
@@ -90,14 +96,13 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         
         //屏幕尺寸判断
         
-        self.view.frame = CGRect(x: 0, y: 20, width: ScreenWidth, height:4000 )
 
         if Screen.width == 320.0{
             
-            SyContnetImage.frame = CGRectMake(18, 18, 282, 153)
-            SyContentTitle.frame = CGRectMake(22, 182, 282, 50)   //**1.17
+            SyContnetImage.frame = CGRectMake(2, 18, 282, 153)
+            SyContentTitle.frame = CGRectMake(2, 182, 282, 50)   //**1.17
             tableCell.frame = CGRectMake(0, 0, ScreenWidth, 180)
-            println(tableCell.frame)
+          //  print(tableCell.frame)
 
             
         }
@@ -105,12 +110,12 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         
         
         if Screen.width == 375.0{
-            SyContnetImage.frame = CGRectMake(22,22,ScreenWidth-44,180) //331*180
-            SyContentTitle.frame = CGRectMake(22,200, ScreenWidth-44,50)
-            SyContentTime.frame = CGRectMake(22, 240, ScreenWidth-44, 20)
-            tableCell.frame = CGRectMake(0, 0, ScreenWidth, 600)
+            SyContnetImage.frame = CGRectMake(2,22,ScreenWidth-44,180) //331*180
+            SyContentTitle.frame = CGRectMake(2,200, ScreenWidth-44,50)
+            SyContentTime.frame = CGRectMake(2, 240, ScreenWidth-44, 20)
+            tableCell.frame = CGRectMake(0, 0, ScreenWidth, 0)
         
-            println(tableCell.frame)
+           // print(tableCell.frame)
 
             
                         }
@@ -124,7 +129,9 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         }
         
         
+
         
+    
         //添加页面元素
         tableCell.frame = CGRectMake(0, 20, ScreenWidth, 1000)
         tableCell.addSubview(SyContnetImage)
@@ -137,7 +144,8 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         SyContnetImage.image = UIImage(named:"\(ImageUrl)")
         SyContentTitle.text = dataGroup["title"] as? String
         SyContentTime.text = dataGroup["time"] as? String
-        println(SyContentTime.text)
+        print(SyContentTime.text)
+            
         
     
         return tableCell
@@ -148,19 +156,19 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
     {
     
         
-        var dataRow = indexPath.row + 1
-        var dataGroup = data["\(dataRow)"] as! NSDictionary
+        let dataRow = indexPath.row + 1
+        let dataGroup = data["\(dataRow)"] as! NSDictionary
         
         SendUrl = dataGroup["url"] as! NSString
         SendTitle = dataGroup["title"] as! NSString
         
     
-        var goDetailContent = DetailViewController()
+        let goDetailContent = DetailViewController()
         
         goDetailContent.ReceiveUrl = SendUrl
         goDetailContent.PageTitle = SendTitle
-        println(goDetailContent.ReceiveUrl)
-        println(goDetailContent.PageTitle)
+      //  print(goDetailContent.ReceiveUrl)
+      //  print(goDetailContent.PageTitle)
         self.performSegueWithIdentifier("goDetailContentSegue", sender: indexPath)
 
         
@@ -173,7 +181,7 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         
                 if segue.identifier == "goDetailContentSegue"{
                     
-                    var goDetailContent = segue.destinationViewController as! DetailViewController
+                    let goDetailContent = segue.destinationViewController as! DetailViewController
                    
                     goDetailContent.ReceiveUrl = SendUrl
 

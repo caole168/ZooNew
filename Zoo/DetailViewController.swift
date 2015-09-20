@@ -24,16 +24,16 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        println(PageTitle)
-        println(ReceiveUrl)
+       
+        print(ReceiveUrl)
         
         
         
         
         self.navigationItem.title = "\(PageTitle)"
-        var Screen = UIScreen.mainScreen().bounds
-        var ScreenWidth = Screen.width
-        var ScreenHeight = Screen.height
+        let Screen = UIScreen.mainScreen().bounds
+        let ScreenWidth = Screen.width
+        let ScreenHeight = Screen.height
         
         LoadUrl = ReceiveUrl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         WebView.frame = CGRectMake(0, 20, ScreenWidth, ScreenHeight)
@@ -82,7 +82,7 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
         //webview结束加载
     }
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError){
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?){
         
     }
 
