@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="247" sectionHeaderHeight="20" sectionFooterHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="FLo-LA-q7a">
-                                <rect key="frame" x="0.0" y="20" width="600" height="600"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="247" sectionHeaderHeight="20" sectionFooterHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="FLo-LA-q7a">
+                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="4" reuseIdentifier="SyCell" rowHeight="247" id="LTw-LS-qii" customClass="SyTableViewCell" customModule="Zoo" customModuleProvider="target">
@@ -46,6 +46,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="FLo-LA-q7a" secondAttribute="bottom" id="96E-Af-5IR"/>
+                            <constraint firstItem="FLo-LA-q7a" firstAttribute="leading" secondItem="m7M-8u-cAp" secondAttribute="leadingMargin" id="aq0-2f-OvE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FLo-LA-q7a" secondAttribute="trailing" id="dbZ-Mc-mbX"/>
+                            <constraint firstItem="FLo-LA-q7a" firstAttribute="top" secondItem="m7M-8u-cAp" secondAttribute="topMargin" id="fgi-26-UC6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Zoo" id="71B-4s-WJh"/>
                     <connections>
