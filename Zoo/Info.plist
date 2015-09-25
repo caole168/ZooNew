@@ -19,7 +19,20 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
+    
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>weixin</string>
+    </array>
+    
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+    
 	<array>
+        
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
@@ -56,5 +69,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    
+    
 </dict>
 </plist>

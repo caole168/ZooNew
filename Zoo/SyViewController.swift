@@ -43,8 +43,7 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
+        
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{

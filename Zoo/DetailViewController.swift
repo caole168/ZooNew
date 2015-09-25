@@ -89,14 +89,14 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
     }
 
     
-    
-    @IBAction func ShareWeChat(sender: AnyObject) {
-        let app = UIApplication.sharedApplication().delegate as! AppDelegate
-        app.sendText()
-
-        
-    }
-
+//    
+//    @IBAction func ShareWeChat(sender: AnyObject) {
+//        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+//        app.sendText()
+//
+//        
+//    }
+//
     /*
     // MARK: - Navigation
 

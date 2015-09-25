@@ -13,6 +13,10 @@
 		5E4C69581B982B9E00F3468C /* ZooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C69571B982B9E00F3468C /* ZooTests.swift */; };
 		5E6CE5FD1BB3C140008528BB /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6CE5F91BB3C140008528BB /* libWeChatSDK.a */; settings = {ASSET_TAGS = (); }; };
 		5E6CE5FE1BB3C140008528BB /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5E6CE5FA1BB3C140008528BB /* read_me.txt */; settings = {ASSET_TAGS = (); }; };
+		5E86FCBE1BB5533200363197 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E86FCBD1BB5533200363197 /* SystemConfiguration.framework */; };
+		5E86FCC01BB5536E00363197 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E86FCBF1BB5536E00363197 /* libsqlite3.0.tbd */; };
+		5E86FCC81BB553D400363197 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E86FCC71BB553D400363197 /* UIKit.framework */; };
+		5E86FCCB1BB5540D00363197 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E86FCC31BB5539900363197 /* libz.tbd */; };
 		B32642421B9A673400012C4E /* 屏幕尺寸 in Resources */ = {isa = PBXBuildFile; fileRef = B32642411B9A673400012C4E /* 屏幕尺寸 */; };
 		B3EBB0B41B9919360050B177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3EBB0B31B9919360050B177 /* Main.storyboard */; };
 		B3EBB0B61B99194B0050B177 /* SyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EBB0B51B99194B0050B177 /* SyViewController.swift */; };
@@ -51,6 +55,13 @@
 		5E6CE5FB1BB3C140008528BB /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		5E6CE5FC1BB3C140008528BB /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		5E6CE5FF1BB3C4D0008528BB /* WeChatBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatBridge.h; sourceTree = "<group>"; };
+		5E86FCBD1BB5533200363197 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5E86FCBF1BB5536E00363197 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		5E86FCC11BB5538000363197 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		5E86FCC31BB5539900363197 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5E86FCC51BB553AB00363197 /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
+		5E86FCC71BB553D400363197 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5E86FCC91BB553EC00363197 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B32642411B9A673400012C4E /* 屏幕尺寸 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "屏幕尺寸"; sourceTree = "<group>"; };
 		B3EBB0B31B9919360050B177 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B3EBB0B51B99194B0050B177 /* SyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +81,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E86FCCB1BB5540D00363197 /* libz.tbd in Frameworks */,
+				5E86FCC81BB553D400363197 /* UIKit.framework in Frameworks */,
+				5E86FCC01BB5536E00363197 /* libsqlite3.0.tbd in Frameworks */,
+				5E86FCBE1BB5533200363197 /* SystemConfiguration.framework in Frameworks */,
 				5E6CE5FD1BB3C140008528BB /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +102,13 @@
 		5E4C69331B982B9E00F3468C = {
 			isa = PBXGroup;
 			children = (
+				5E86FCC91BB553EC00363197 /* Foundation.framework */,
+				5E86FCC71BB553D400363197 /* UIKit.framework */,
+				5E86FCC51BB553AB00363197 /* libz.1.tbd */,
+				5E86FCC31BB5539900363197 /* libz.tbd */,
+				5E86FCC11BB5538000363197 /* libz.1.2.5.tbd */,
+				5E86FCBF1BB5536E00363197 /* libsqlite3.0.tbd */,
+				5E86FCBD1BB5533200363197 /* SystemConfiguration.framework */,
 				5E4C693E1B982B9E00F3468C /* Zoo */,
 				5E4C693D1B982B9E00F3468C /* Products */,
 				5E6CE5F21BB3C0D2008528BB /* WeChatSDk */,
@@ -357,9 +379,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -395,8 +418,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -411,8 +436,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = WeChatBridge.h;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -427,8 +454,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = WeChatBridge.h;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
