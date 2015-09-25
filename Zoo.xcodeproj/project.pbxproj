@@ -11,6 +11,8 @@
 		5E4C69491B982B9E00F3468C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C69481B982B9E00F3468C /* Images.xcassets */; };
 		5E4C694C1B982B9E00F3468C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C694A1B982B9E00F3468C /* LaunchScreen.xib */; };
 		5E4C69581B982B9E00F3468C /* ZooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C69571B982B9E00F3468C /* ZooTests.swift */; };
+		5E6CE5FD1BB3C140008528BB /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6CE5F91BB3C140008528BB /* libWeChatSDK.a */; settings = {ASSET_TAGS = (); }; };
+		5E6CE5FE1BB3C140008528BB /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5E6CE5FA1BB3C140008528BB /* read_me.txt */; settings = {ASSET_TAGS = (); }; };
 		B32642421B9A673400012C4E /* 屏幕尺寸 in Resources */ = {isa = PBXBuildFile; fileRef = B32642411B9A673400012C4E /* 屏幕尺寸 */; };
 		B3EBB0B41B9919360050B177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3EBB0B31B9919360050B177 /* Main.storyboard */; };
 		B3EBB0B61B99194B0050B177 /* SyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EBB0B51B99194B0050B177 /* SyViewController.swift */; };
@@ -44,6 +46,11 @@
 		5E4C69511B982B9E00F3468C /* ZooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4C69561B982B9E00F3468C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E4C69571B982B9E00F3468C /* ZooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooTests.swift; sourceTree = "<group>"; };
+		5E6CE5F91BB3C140008528BB /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		5E6CE5FA1BB3C140008528BB /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
+		5E6CE5FB1BB3C140008528BB /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		5E6CE5FC1BB3C140008528BB /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		5E6CE5FF1BB3C4D0008528BB /* WeChatBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatBridge.h; sourceTree = "<group>"; };
 		B32642411B9A673400012C4E /* 屏幕尺寸 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "屏幕尺寸"; sourceTree = "<group>"; };
 		B3EBB0B31B9919360050B177 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B3EBB0B51B99194B0050B177 /* SyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6CE5FD1BB3C140008528BB /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,8 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				5E4C693E1B982B9E00F3468C /* Zoo */,
-				5E4C69541B982B9E00F3468C /* ZooTests */,
 				5E4C693D1B982B9E00F3468C /* Products */,
+				5E6CE5F21BB3C0D2008528BB /* WeChatSDk */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +113,7 @@
 				5E4C69481B982B9E00F3468C /* Images.xcassets */,
 				5E4C694A1B982B9E00F3468C /* LaunchScreen.xib */,
 				5E4C693F1B982B9E00F3468C /* Supporting Files */,
+				5E4C69541B982B9E00F3468C /* ZooTests */,
 			);
 			path = Zoo;
 			sourceTree = "<group>";
@@ -128,7 +137,7 @@
 				5E4C69551B982B9E00F3468C /* Supporting Files */,
 			);
 			path = ZooTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		5E4C69551B982B9E00F3468C /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -136,6 +145,18 @@
 				5E4C69561B982B9E00F3468C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E6CE5F21BB3C0D2008528BB /* WeChatSDk */ = {
+			isa = PBXGroup;
+			children = (
+				5E6CE5F91BB3C140008528BB /* libWeChatSDK.a */,
+				5E6CE5FA1BB3C140008528BB /* read_me.txt */,
+				5E6CE5FC1BB3C140008528BB /* WXApiObject.h */,
+				5E6CE5FF1BB3C4D0008528BB /* WeChatBridge.h */,
+				5E6CE5FB1BB3C140008528BB /* WXApi.h */,
+			);
+			name = WeChatSDk;
 			sourceTree = "<group>";
 		};
 		B3EBB0BF1B991A3B0050B177 /* test */ = {
@@ -194,6 +215,7 @@
 		5E4C69341B982B9E00F3468C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = pincher;
 				TargetAttributes = {
@@ -241,6 +263,7 @@
 				B3EBB0C71B991A3B0050B177 /* 2.jpeg in Resources */,
 				5E4C69491B982B9E00F3468C /* Images.xcassets in Resources */,
 				B3EBB0B41B9919360050B177 /* Main.storyboard in Resources */,
+				5E6CE5FE1BB3C140008528BB /* read_me.txt in Resources */,
 				B3EBB0B81B9919890050B177 /* SyPlist.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,7 +407,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Zoo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/微信分享SDK",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -395,7 +424,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Zoo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/微信分享SDK",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

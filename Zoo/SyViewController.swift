@@ -61,7 +61,7 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         
         
         let tableCell : SyTableViewCell = tableView.dequeueReusableCellWithIdentifier("SyCell", forIndexPath: indexPath) as! SyTableViewCell
-        
+   
         
         
         //屏幕尺寸
@@ -69,9 +69,8 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         let ScreenWidth = Screen.width
         let ScreenHeight = Screen.height
 
-        
-        
-        
+  
+    
             
         //cell元素
         let SyContnetImage = UIImageView()
@@ -83,7 +82,7 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         let SyContentTime = UILabel()
         SyContentTime.font = UIFont(name: "", size: 1)
         
-        
+        tableView.rowHeight = 260
         
         //加载数据
         let dataRow = indexPath.row + 1 //数组元素从1开始的，所以+1 ，indexPath默认为0
@@ -100,7 +99,7 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         if Screen.width == 320.0{
             
             SyContnetImage.frame = CGRectMake(2, 18, 282, 153)
-            SyContentTitle.frame = CGRectMake(2, 182, 282, 50)   //**1.17
+            SyContentTitle.frame = CGRectMake(2, 182, 282, 50)   //  iphone 5  *1.17
             tableCell.frame = CGRectMake(0, 0, ScreenWidth, 180)
           //  print(tableCell.frame)
 
@@ -110,9 +109,9 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         
         
         if Screen.width == 375.0{
-            SyContnetImage.frame = CGRectMake(2,22,ScreenWidth-44,180) //331*180
-            SyContentTitle.frame = CGRectMake(2,200, ScreenWidth-44,50)
-            SyContentTime.frame = CGRectMake(2, 240, ScreenWidth-44, 20)
+            SyContnetImage.frame = CGRectMake(26,22,ScreenWidth-48,180) //  iphone 6  331*180
+            SyContentTitle.frame = CGRectMake(26,200, ScreenWidth-48,50)
+            SyContentTime.frame = CGRectMake(26, 240, ScreenWidth-4, 20)
             tableCell.frame = CGRectMake(0, 0, ScreenWidth, 0)
         
            // print(tableCell.frame)
@@ -122,9 +121,9 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         
         
         
-        if Screen.width == 414.0{   //1.10
+        if Screen.width == 414.0{
             
-            SyContnetImage.frame = CGRectMake(24, 24, 364, 198)
+            SyContnetImage.frame = CGRectMake(24, 24, 364, 198)   // iphone 6 plus   1.10
             SyContentTitle.frame = CGRectMake(24, 235,364, 30)
         }
         
@@ -133,7 +132,6 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         
     
         //添加页面元素
-        tableCell.frame = CGRectMake(0, 20, ScreenWidth, 1000)
         tableCell.addSubview(SyContnetImage)
         tableCell.addSubview(SyContentTitle)
  //       tableCell.addSubview(SyContentTime)
@@ -144,14 +142,19 @@ class SyViewController: UIViewController,UITableViewDelegate,UITableViewDataSour
         SyContnetImage.image = UIImage(named:"\(ImageUrl)")
         SyContentTitle.text = dataGroup["title"] as? String
         SyContentTime.text = dataGroup["time"] as? String
-        print(SyContentTime.text)
+ 
             
         
     
         return tableCell
     }
     
-    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        
+        return 100
+    }
+
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
     

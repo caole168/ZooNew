@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Zoo-->
@@ -17,24 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="247" sectionHeaderHeight="20" sectionFooterHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="FLo-LA-q7a">
-                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" sectionHeaderHeight="20" sectionFooterHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="FLo-LA-q7a">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="4" reuseIdentifier="SyCell" rowHeight="247" id="LTw-LS-qii" customClass="SyTableViewCell" customModule="Zoo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="84" width="600" height="247"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="4" reuseIdentifier="SyCell" id="LTw-LS-qii" customClass="SyTableViewCell" customModule="Zoo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="84" width="600" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" tableViewCell="LTw-LS-qii" id="XJc-au-FAh">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="246.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="249.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="20" width="600" height="780"/>
-                                </variation>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="20" width="320" height="647"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="20" width="375" height="780"/>
@@ -48,8 +46,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="FLo-LA-q7a" secondAttribute="bottom" id="96E-Af-5IR"/>
-                            <constraint firstItem="FLo-LA-q7a" firstAttribute="leading" secondItem="m7M-8u-cAp" secondAttribute="leadingMargin" id="aq0-2f-OvE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FLo-LA-q7a" secondAttribute="trailing" id="dbZ-Mc-mbX"/>
+                            <constraint firstItem="FLo-LA-q7a" firstAttribute="leading" secondItem="m7M-8u-cAp" secondAttribute="leadingMargin" constant="-20" id="aq0-2f-OvE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FLo-LA-q7a" secondAttribute="trailing" constant="-20" id="dbZ-Mc-mbX"/>
                             <constraint firstItem="FLo-LA-q7a" firstAttribute="top" secondItem="m7M-8u-cAp" secondAttribute="topMargin" id="fgi-26-UC6"/>
                         </constraints>
                     </view>
