@@ -9,47 +9,48 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate{
+//class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate{
 
+class AppDelegate: UIResponder, UIApplicationDelegate{
     var window: UIWindow?
 
-
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        
-        WXApi.registerApp("wx5e0be8387470d1b0", withDescription: "Post")
-        
-        
-        // Override point for customization after application launch.
-        return true
-    }
+//
+//    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+//        
+//        
+//        WXApi.registerApp("wx5e0be8387470d1b0", withDescription: "Post")
+//        
+//        
+//        // Override point for customization after application launch.
+//        return true
+//    }
+//    
     
-    
-    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
-        return WXApi.handleOpenURL(url, delegate: self)
-    }
-    
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        return WXApi.handleOpenURL(url, delegate: self)
-    }
-    
-    
-    func onReq(req: BaseReq!) {
-        
-    }
-    
-    
-    func onResp(resp: BaseResp!) {
-        
-    
-    }
-    
-    func sendText() {
-        let req = SendMessageToWXReq()
-        req.text = "hahahahahhahahahhahah"
-        req.bText = true
-        WXApi.sendReq(req)
-    }
+//    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+//        return WXApi.handleOpenURL(url, delegate: self)
+//    }
+//    
+//    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+//        return WXApi.handleOpenURL(url, delegate: self)
+//    }
+//    
+//    
+//    func onReq(req: BaseReq!) {
+//        
+//    }
+//    
+//    
+//    func onResp(resp: BaseResp!) {
+//        
+//    
+//    }
+//    
+//    func sendText() {
+//        let req = SendMessageToWXReq()
+//        req.text = "hahahahahhahahahhahah"
+//        req.bText = true
+//        WXApi.sendReq(req)
+//    }
 
     
     

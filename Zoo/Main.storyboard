@@ -3,62 +3,39 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Zoo-->
-        <scene sceneID="86H-9d-e3h">
+        <scene sceneID="iZp-ef-4eB">
             <objects>
-                <viewController id="4c0-N7-d0u" customClass="SyViewController" customModule="Zoo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ZcV-dH-geS"/>
-                        <viewControllerLayoutGuide type="bottom" id="us3-hX-gZb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="m7M-8u-cAp">
+                <tableViewController id="6BG-3X-unp" customClass="SyViewController" customModule="Zoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="139" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bq0-da-oTo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" sectionHeaderHeight="20" sectionFooterHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="FLo-LA-q7a">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="4" reuseIdentifier="SyCell" id="LTw-LS-qii" customClass="SyTableViewCell" customModule="Zoo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="84" width="600" height="250"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" tableViewCell="LTw-LS-qii" id="XJc-au-FAh">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="249.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="20" width="600" height="780"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="20" width="375" height="780"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="4c0-N7-d0u" id="ClZ-es-UIR"/>
-                                    <outlet property="delegate" destination="4c0-N7-d0u" id="gHp-q0-Cdo"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="FLo-LA-q7a" secondAttribute="bottom" id="96E-Af-5IR"/>
-                            <constraint firstItem="FLo-LA-q7a" firstAttribute="leading" secondItem="m7M-8u-cAp" secondAttribute="leadingMargin" constant="-20" id="aq0-2f-OvE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FLo-LA-q7a" secondAttribute="trailing" constant="-20" id="dbZ-Mc-mbX"/>
-                            <constraint firstItem="FLo-LA-q7a" firstAttribute="top" secondItem="m7M-8u-cAp" secondAttribute="topMargin" id="fgi-26-UC6"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Zoo" id="71B-4s-WJh"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SyCell" rowHeight="139" id="PxI-Hd-fiq" customClass="SyTableViewCell" customModule="Zoo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="139"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PxI-Hd-fiq" id="Fb1-Y5-Cqj">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="138.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6BG-3X-unp" id="qmM-xX-oH9"/>
+                            <outlet property="delegate" destination="6BG-3X-unp" id="Q8G-Bh-voO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Zoo" id="kSK-KI-5bP"/>
                     <connections>
-                        <segue destination="Q2s-LV-1EJ" kind="show" identifier="goDetailContentSegue" id="YJX-RA-kcv"/>
+                        <segue destination="Q2s-LV-1EJ" kind="show" identifier="goDetailContentSegue" id="YQ3-RM-PbR"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M9H-13-6ak" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wzp-Vs-Pjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="769" y="147"/>
+            <point key="canvasLocation" x="731" y="218"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="fmv-Um-axn">
@@ -116,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAw-FZ-yuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1046"/>
+            <point key="canvasLocation" x="731" y="963"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JHZ-Gx-u9G">
@@ -129,7 +106,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="4c0-N7-d0u" kind="relationship" relationship="rootViewController" id="Hnf-2k-FVp"/>
+                        <segue destination="6BG-3X-unp" kind="relationship" relationship="rootViewController" id="aZL-U4-daz"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lR6-ra-bBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
