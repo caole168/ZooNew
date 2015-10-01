@@ -68,6 +68,9 @@ class SyTableViewCell: UITableViewCell {
         }
         
         
+        self.addSubview(SyContentTitle)
+        self.addSubview(SyContentImage)
+        
 
     }
   

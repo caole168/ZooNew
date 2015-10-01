@@ -43,7 +43,6 @@ class SyViewController: UITableViewController{
         PullRefreshControl.tintColor = UIColor.greenColor()
         PullRefreshControl.addTarget(self, action: "refresh", forControlEvents: .ValueChanged)
         
-        
     }
 
     
@@ -82,13 +81,7 @@ class SyViewController: UITableViewController{
         tableCell.SyContentTitle.text = dataGroup["title"] as? String
         tableCell.SyContentTime.text = dataGroup["time"] as? String
  
-            
-        
-        //添加页面元素
-        tableCell.addSubview(tableCell.SyContentImage)
-        tableCell.addSubview(tableCell.SyContentTitle)
-        //tableCell.addSubview(SyContentTime)
-        
+
         return tableCell
         
     }
@@ -136,8 +129,8 @@ class SyViewController: UITableViewController{
     
     }
     
-    
-    
+
+    //下拉刷新
     func refresh() {
         
             if self.PullRefreshControl.refreshing == true {
@@ -157,7 +150,7 @@ class SyViewController: UITableViewController{
             
             self.PullRefreshControl.attributedTitle = NSAttributedString(string: "Pull To Refresh")
                 
-         //   self.tableView.reloadData()
+            self.tableView.reloadData()
                 
                 
                 })

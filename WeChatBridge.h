@@ -8,18 +8,6 @@
 
 
 @import UIKit ;
-//#import WXApiObject.h ;
-//#import WXApi.h ;
-//
-//#ifndef WeChatBridge_h
-//#define WeChatBridge_h
-//
-//#endif
-//
-//
-//#endif /* WeChatBridge_h */
-
-
 
 
 

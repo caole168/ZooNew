@@ -9,19 +9,56 @@
 import UIKit
 
 
-
 class DetailViewController: UIViewController,UIWebViewDelegate {
 
     
     var ReceiveUrl:NSString!
     var LoadUrl:NSString!
     var PageTitle:NSString!
-    
+    let Screen = UIScreen.mainScreen().bounds
     var loadImage = UIActivityIndicatorView()
     
     
-
     @IBOutlet weak var WebView: UIWebView!
+    
+    @IBAction func sharButton(sender: AnyObject) {
+        
+        let shareView = UIView()
+        shareView.frame = CGRectMake(0, 300, Screen.width, 100)
+        shareView.backgroundColor = UIColor.blackColor()
+        self.view.addSubview(shareView)
+        
+       
+        
+        let shareToWxFriend = UIButton()
+        shareToWxFriend.setBackgroundImage(UIImage(named: "wechat_icon_3x.png"), forState: UIControlState.Normal)
+        shareToWxFriend.tag = 100
+        shareToWxFriend.frame = CGRectMake(100, 340, 50, 50)
+        shareToWxFriend.addTarget(self, action: "didselect:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(shareToWxFriend)
+        
+        
+        let shareToWxMoments = UIButton()
+        shareToWxMoments.setBackgroundImage(UIImage(named: "wechat_moments_icon_3x.png"), forState: UIControlState.Normal)
+        shareToWxMoments.tag = 101
+        shareToWxMoments.frame = CGRectMake(250, 340, 50, 50)
+        shareToWxMoments.addTarget(self, action: "didselect:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(shareToWxMoments)
+
+    }
+
+    func didselect(sender:UIButton) {
+        if sender.tag == 100 {
+            sendText(0)
+        }
+        else {
+            sendText(1)
+        }
+        
+    }
+
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +70,7 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
         
         
         self.navigationItem.title = "\(PageTitle)"
-        let Screen = UIScreen.mainScreen().bounds
+
         let ScreenWidth = Screen.width
         let ScreenHeight = Screen.height
         

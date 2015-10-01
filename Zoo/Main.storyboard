@@ -81,10 +81,10 @@
                                 <rect key="frame" x="447" y="7" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="分享"/>
+                                <connections>
+                                    <action selector="sharButton:" destination="Q2s-LV-1EJ" eventType="touchUpInside" id="spU-lw-lnT"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="ShareWeChat:" destination="Q2s-LV-1EJ" id="0p8-qb-qss"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

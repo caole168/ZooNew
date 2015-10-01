@@ -180,12 +180,16 @@ enum WXMPWebviewType {
  * @note 文本长度必须大于0且小于10K
  */
 @property (nonatomic, retain) NSString* text;
+
+
 /** 发送消息的多媒体内容
  * @see WXMediaMessage
  */
 @property (nonatomic, retain) WXMediaMessage* message;
+
 /** 发送消息的类型，包括文本消息和多媒体消息两种，两者只能选择其一，不能同时发送文本和多媒体消息 */
 @property (nonatomic, assign) BOOL bText;
+
 /** 发送的目标场景，可以选择发送到会话(WXSceneSession)或者朋友圈(WXSceneTimeline)。 默认发送到会话。
  * @see WXScene
  */
@@ -260,7 +264,7 @@ enum WXMPWebviewType {
 /*! @brief 微信通知第三方程序，要求第三方程序显示或处理某些消息，第三方程序处理完后向微信终端发送的处理结果。
  *
  * 微信需要通知第三方程序显示或处理某些内容时，会向第三方程序发送ShowMessageFromWXReq消息结构体。
- * 第三方程序处理完内容后调用sendResp向微信终端发送ShowMessageFromWXResp。
+ * 第三方程序处理完内容后调用sendResp向微信终e端发送ShowMessageFromWXResp。
  */
 @interface ShowMessageFromWXResp : BaseResp
 @end
