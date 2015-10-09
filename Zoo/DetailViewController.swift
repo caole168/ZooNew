@@ -22,28 +22,56 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
     @IBOutlet weak var WebView: UIWebView!
     
     @IBAction func sharButton(sender: AnyObject) {
+//        
+//        let shareView = UIView()
+//        shareView.frame = CGRectMake(0, 300, Screen.width, 100)
+//        shareView.backgroundColor = UIColor.blackColor()
+//        self.view.addSubview(shareView)
+//        
+//       
+//        
+//        let shareToWxFriend = UIButton()
+//        shareToWxFriend.setBackgroundImage(UIImage(named: "wechat_icon_3x.png"), forState: UIControlState.Normal)
+//        shareToWxFriend.tag = 100
+//        shareToWxFriend.frame = CGRectMake(100, 340, 50, 50)
+//        shareToWxFriend.addTarget(self, action: "didselect:", forControlEvents: UIControlEvents.TouchUpInside)
+//        self.view.addSubview(shareToWxFriend)
+//        
+//        
+//        let shareToWxMoments = UIButton()
+//        shareToWxMoments.setBackgroundImage(UIImage(named: "wechat_moments_icon_3x.png"), forState: UIControlState.Normal)
+//        shareToWxMoments.tag = 101
+//        shareToWxMoments.frame = CGRectMake(250, 340, 50, 50)
+//        shareToWxMoments.addTarget(self, action: "didselect:", forControlEvents: UIControlEvents.TouchUpInside)
+//        self.view.addSubview(shareToWxMoments)
         
-        let shareView = UIView()
-        shareView.frame = CGRectMake(0, 300, Screen.width, 100)
-        shareView.backgroundColor = UIColor.blackColor()
-        self.view.addSubview(shareView)
+        let a = UIAlertController(title: "分享到", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
         
-       
-        
-        let shareToWxFriend = UIButton()
-        shareToWxFriend.setBackgroundImage(UIImage(named: "wechat_icon_3x.png"), forState: UIControlState.Normal)
-        shareToWxFriend.tag = 100
-        shareToWxFriend.frame = CGRectMake(100, 340, 50, 50)
-        shareToWxFriend.addTarget(self, action: "didselect:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(shareToWxFriend)
+        let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
+
+        let ShareToWxAction = UIAlertAction(title: "微信好友", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+            sendText(0)
+        }
+        let ShareToConmentsAction = UIAlertAction(title: "微信朋友圈", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+            sendText(1)
+        }
         
         
-        let shareToWxMoments = UIButton()
-        shareToWxMoments.setBackgroundImage(UIImage(named: "wechat_moments_icon_3x.png"), forState: UIControlState.Normal)
-        shareToWxMoments.tag = 101
-        shareToWxMoments.frame = CGRectMake(250, 340, 50, 50)
-        shareToWxMoments.addTarget(self, action: "didselect:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(shareToWxMoments)
+        a.addAction(ShareToWxAction)
+        a.addAction(ShareToConmentsAction)
+        a.addAction(cancelAction)
+  
+      
+        presentViewController(a, animated: true, completion: nil)
+        
+        
+    
+        
+//        
+//        self.presentedViewController(a,animated:true,completion:nil)
+        
+        
+        
 
     }
 
