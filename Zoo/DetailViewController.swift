@@ -13,6 +13,8 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
 
     
     var ReceiveUrl:NSString!
+    var ReceiveTitle:NSString!
+    var ReceiveImage:NSString!
     var LoadUrl:NSString!
     var PageTitle:NSString!
     let Screen = UIScreen.mainScreen().bounds
@@ -21,69 +23,34 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
     
     @IBOutlet weak var WebView: UIWebView!
     
+    
     @IBAction func sharButton(sender: AnyObject) {
-//        
-//        let shareView = UIView()
-//        shareView.frame = CGRectMake(0, 300, Screen.width, 100)
-//        shareView.backgroundColor = UIColor.blackColor()
-//        self.view.addSubview(shareView)
-//        
-//       
-//        
-//        let shareToWxFriend = UIButton()
-//        shareToWxFriend.setBackgroundImage(UIImage(named: "wechat_icon_3x.png"), forState: UIControlState.Normal)
-//        shareToWxFriend.tag = 100
-//        shareToWxFriend.frame = CGRectMake(100, 340, 50, 50)
-//        shareToWxFriend.addTarget(self, action: "didselect:", forControlEvents: UIControlEvents.TouchUpInside)
-//        self.view.addSubview(shareToWxFriend)
-//        
-//        
-//        let shareToWxMoments = UIButton()
-//        shareToWxMoments.setBackgroundImage(UIImage(named: "wechat_moments_icon_3x.png"), forState: UIControlState.Normal)
-//        shareToWxMoments.tag = 101
-//        shareToWxMoments.frame = CGRectMake(250, 340, 50, 50)
-//        shareToWxMoments.addTarget(self, action: "didselect:", forControlEvents: UIControlEvents.TouchUpInside)
-//        self.view.addSubview(shareToWxMoments)
+
+   
         
-        let a = UIAlertController(title: "分享到", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let ShareController = UIAlertController(title: "分享到", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
         
         let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
-
+        
         let ShareToWxAction = UIAlertAction(title: "微信好友", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
-            sendText(0)
+            sendText(0 , ShareTitle:self.ReceiveTitle , ShareUrl:self.ReceiveUrl)
         }
+        
         let ShareToConmentsAction = UIAlertAction(title: "微信朋友圈", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
-            sendText(1)
+            sendText(1 , ShareTitle:self.ReceiveTitle , ShareUrl:self.ReceiveUrl)
         }
         
         
-        a.addAction(ShareToWxAction)
-        a.addAction(ShareToConmentsAction)
-        a.addAction(cancelAction)
-  
-      
-        presentViewController(a, animated: true, completion: nil)
+        ShareController.addAction(ShareToWxAction)
+        ShareController.addAction(ShareToConmentsAction)
+        ShareController.addAction(cancelAction)
         
-        
-    
-        
-//        
-//        self.presentedViewController(a,animated:true,completion:nil)
+        presentViewController(ShareController, animated: true, completion: nil)
         
         
         
-
     }
 
-    func didselect(sender:UIButton) {
-        if sender.tag == 100 {
-            sendText(0)
-        }
-        else {
-            sendText(1)
-        }
-        
-    }
 
     
 
@@ -92,12 +59,8 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
         super.viewDidLoad()
         
        
-        print(ReceiveUrl)
         
-        
-        
-        
-        self.navigationItem.title = "\(PageTitle)"
+        self.navigationItem.title = "\(ReceiveTitle)"
 
         let ScreenWidth = Screen.width
         let ScreenHeight = Screen.height
@@ -106,13 +69,10 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
         WebView.frame = CGRectMake(0, 20, ScreenWidth, ScreenHeight)
         WebView.reload()
         WebView.reloadInputViews()
-
-        //     browserView.loadRequest(b)
         WebView.loadRequest(NSURLRequest(URL:NSURL(string: "http://\(LoadUrl)")! ) )
         WebView.delegate = self
   
         
-     
         // Do any additional setup after loading the view.
     }
 

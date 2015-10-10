@@ -19,6 +19,7 @@ class SyViewController: UITableViewController{
     var data:NSMutableDictionary = NSMutableDictionary()
     var SendUrl:NSString!
     var SendTitle:NSString!
+    var SendImage:NSString!
     let PullRefreshControl = UIRefreshControl()
     //var plist
     
@@ -102,12 +103,14 @@ class SyViewController: UITableViewController{
         
         SendUrl = dataGroup["url"] as! NSString
         SendTitle = dataGroup["title"] as! NSString
+        SendImage = dataGroup["image"] as! NSString
+        
         
     
-        let goDetailContent = DetailViewController()
+       // let goDetailContent = DetailViewController()
         
-        goDetailContent.ReceiveUrl = SendUrl
-        goDetailContent.PageTitle = SendTitle
+       // goDetailContent.ReceiveUrl = SendUrl
+       // goDetailContent.PageTitle = SendTitle
       //  print(goDetailContent.ReceiveUrl)
       //  print(goDetailContent.PageTitle)
         self.performSegueWithIdentifier("goDetailContentSegue", sender: indexPath)
@@ -124,6 +127,9 @@ class SyViewController: UITableViewController{
                     let goDetailContent = segue.destinationViewController as! DetailViewController
                    
                     goDetailContent.ReceiveUrl = SendUrl
+                    goDetailContent.ReceiveTitle = SendTitle
+                    goDetailContent.ReceiveImage = SendImage
+                    
 
                 }
     

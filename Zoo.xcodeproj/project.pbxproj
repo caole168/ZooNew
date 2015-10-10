@@ -20,7 +20,7 @@
 		5E27FD981BBD2C3100EAF4FC /* wechat_moments_icon_1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD951BBD2C3100EAF4FC /* wechat_moments_icon_1x.png */; settings = {ASSET_TAGS = (); }; };
 		5E27FD991BBD2C3100EAF4FC /* wechat_moments_icon_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD961BBD2C3100EAF4FC /* wechat_moments_icon_2x.png */; settings = {ASSET_TAGS = (); }; };
 		5E27FD9A1BBD2C3100EAF4FC /* wechat_moments_icon_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD971BBD2C3100EAF4FC /* wechat_moments_icon_3x.png */; settings = {ASSET_TAGS = (); }; };
-		5E27FD9C1BBD2FF200EAF4FC /* share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E27FD9B1BBD2FF200EAF4FC /* share.swift */; settings = {ASSET_TAGS = (); }; };
+		5E27FD9C1BBD2FF200EAF4FC /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E27FD9B1BBD2FF200EAF4FC /* ShareViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		5E4C69421B982B9E00F3468C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C69411B982B9E00F3468C /* AppDelegate.swift */; };
 		5E4C69491B982B9E00F3468C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C69481B982B9E00F3468C /* Images.xcassets */; };
 		5E4C694C1B982B9E00F3468C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C694A1B982B9E00F3468C /* LaunchScreen.xib */; };
@@ -63,7 +63,7 @@
 		5E27FD951BBD2C3100EAF4FC /* wechat_moments_icon_1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechat_moments_icon_1x.png; sourceTree = "<group>"; };
 		5E27FD961BBD2C3100EAF4FC /* wechat_moments_icon_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechat_moments_icon_2x.png; sourceTree = "<group>"; };
 		5E27FD971BBD2C3100EAF4FC /* wechat_moments_icon_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechat_moments_icon_3x.png; sourceTree = "<group>"; };
-		5E27FD9B1BBD2FF200EAF4FC /* share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = share.swift; sourceTree = "<group>"; };
+		5E27FD9B1BBD2FF200EAF4FC /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		5E4C693C1B982B9E00F3468C /* Zoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4C69401B982B9E00F3468C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E4C69411B982B9E00F3468C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,10 +166,10 @@
 			children = (
 				5E4C69411B982B9E00F3468C /* AppDelegate.swift */,
 				B3EBB0B31B9919360050B177 /* Main.storyboard */,
-				B3EBB0B51B99194B0050B177 /* SyViewController.swift */,
 				B3EBB0B91B9919920050B177 /* SyCellClass.swift */,
+				B3EBB0B51B99194B0050B177 /* SyViewController.swift */,
 				B3EBB0CC1B99236E0050B177 /* DetailViewController.swift */,
-				5E27FD9B1BBD2FF200EAF4FC /* share.swift */,
+				5E27FD9B1BBD2FF200EAF4FC /* ShareViewController.swift */,
 				5E4C69481B982B9E00F3468C /* Images.xcassets */,
 				5E4C694A1B982B9E00F3468C /* LaunchScreen.xib */,
 				5E4C693F1B982B9E00F3468C /* Supporting Files */,
@@ -353,7 +353,7 @@
 				B3EBB0BA1B9919920050B177 /* SyCellClass.swift in Sources */,
 				5E4C69421B982B9E00F3468C /* AppDelegate.swift in Sources */,
 				B3EBB0CD1B99236E0050B177 /* DetailViewController.swift in Sources */,
-				5E27FD9C1BBD2FF200EAF4FC /* share.swift in Sources */,
+				5E27FD9C1BBD2FF200EAF4FC /* ShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
