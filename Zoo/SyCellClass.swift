@@ -17,10 +17,10 @@ class SyTableViewCell: UITableViewCell {
 
     
     //创建元素
-    let SyContentTitle = UILabel()
-    let SyContentImage = UIImageView()
-    let SyContentTime = UILabel()
-
+    let syContentTitle = UILabel()
+    let syContentImage = UIImageView()
+    let syContentTime = UILabel()
+    let syContentSource = UILabel()
     
     
     override func awakeFromNib() {
@@ -30,9 +30,9 @@ class SyTableViewCell: UITableViewCell {
         
         let ScreenWidth = Screen.width
         
-        SyContentTitle.numberOfLines = 2
-        SyContentTitle.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        SyContentTitle.textAlignment = NSTextAlignment.Justified
+        syContentTitle.numberOfLines = 2
+        syContentTitle.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        syContentTitle.textAlignment = NSTextAlignment.Justified
 
 
         
@@ -41,9 +41,10 @@ class SyTableViewCell: UITableViewCell {
         
         if Screen.width == 320.0{
             
-            SyContentImage.frame = CGRectMake(2, 18, 282, 153)
-            SyContentTitle.frame = CGRectMake(2, 182, 282, 50)   //  iphone 5  *1.17
-            self.frame = CGRectMake(0, 0, ScreenWidth, 180)
+            syContentImage.frame = CGRectMake(2, 18, 282, 153)
+            syContentTitle.frame = CGRectMake(2, 182, 282, 50)   //  iphone 5  *1.17
+            syContentTime.frame  = CGRectMake(2, 182, 282, 50)
+             self.frame = CGRectMake(0, 0, ScreenWidth, 180)
         
         }
         
@@ -51,25 +52,34 @@ class SyTableViewCell: UITableViewCell {
         
         if Screen.width == 375.0{
             
-            SyContentImage.frame = CGRectMake(26,22,ScreenWidth-48,180) //  iphone 6  331*180
-            SyContentTitle.frame = CGRectMake(26,200, ScreenWidth-48,50)
-            SyContentTime.frame = CGRectMake(26, 240, ScreenWidth-4, 20)
-            self.frame = CGRectMake(0, 0, ScreenWidth, 0)
+            syContentImage.frame = CGRectMake(26,22,ScreenWidth-48,180) //  iphone 6  331*180
+            syContentTitle.frame = CGRectMake(26,200, ScreenWidth-48,50)
+            syContentTime.frame  = CGRectMake(320, 245, 100, 20)
+            syContentSource.frame = CGRectMake(26, 245, 100, 20)
             
+            
+            syContentSource.font    = UIFont(name:"Arial", size: 10)
+            syContentTime.font      = UIFont(name: "Arial", size: 10)
+            syContentSource.textColor = UIColor.grayColor()
+            syContentTime.textColor = UIColor.grayColor()
+            
+        
         }
         
         
         
         if Screen.width == 414.0{
             
-            SyContentImage.frame = CGRectMake(24, 24, 364, 198)   // iphone 6 plus   1.10
-            SyContentTitle.frame = CGRectMake(24, 235,364, 30)
+            syContentImage.frame = CGRectMake(24, 24, 364, 198)   // iphone 6 plus   1.10
+            syContentTitle.frame = CGRectMake(24, 235,364, 30)
             
         }
         
         
-        self.addSubview(SyContentTitle)
-        self.addSubview(SyContentImage)
+        self.addSubview(syContentTitle)
+        self.addSubview(syContentImage)
+        self.addSubview(syContentTime)
+        self.addSubview(syContentSource)
         
 
     }

@@ -61,6 +61,7 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
        
         
         self.navigationItem.title = "\(ReceiveTitle)"
+      //  self.navigationItem.
 
         let ScreenWidth = Screen.width
         let ScreenHeight = Screen.height

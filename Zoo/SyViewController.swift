@@ -17,10 +17,14 @@ class SyViewController: UITableViewController{
     
     var plistData:NSString = ""
     var data:NSMutableDictionary = NSMutableDictionary()
-    var SendUrl:NSString!
-    var SendTitle:NSString!
-    var SendImage:NSString!
-    let PullRefreshControl = UIRefreshControl()
+    
+    //传值
+    var sendUrl:NSString!
+    var sendTitle:NSString!
+    var sendImage:NSString!
+    
+    //下拉刷新空间
+    let pullRefreshControl = UIRefreshControl()
     //var plist
     
     var _dataSource:[String] = []
@@ -40,9 +44,9 @@ class SyViewController: UITableViewController{
         // 初始下拉刷新控件
        
         self.refreshControl = UIRefreshControl()
-        PullRefreshControl.attributedTitle = NSAttributedString(string: "释放加载新内容")
-        PullRefreshControl.tintColor = UIColor.greenColor()
-        PullRefreshControl.addTarget(self, action: "refresh", forControlEvents: .ValueChanged)
+        pullRefreshControl.attributedTitle = NSAttributedString(string: "释放加载新内容")
+        pullRefreshControl.tintColor = UIColor.greenColor()
+        pullRefreshControl.addTarget(self, action: "refresh", forControlEvents: .ValueChanged)
         
     }
 
@@ -69,8 +73,8 @@ class SyViewController: UITableViewController{
         let tableCell : SyTableViewCell = tableView.dequeueReusableCellWithIdentifier("SyCell", forIndexPath: indexPath) as! SyTableViewCell
    
         
-        tableView.rowHeight = 260
-        
+        tableView.rowHeight = 270
+    //    tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         //加载数据
         let dataRow = indexPath.row + 1 //数组元素从1开始的，所以+1 ，indexPath默认为0
         let dataGroup = data["\(dataRow)"] as! NSDictionary
@@ -78,21 +82,18 @@ class SyViewController: UITableViewController{
      
         
         //赋值
-        tableCell.SyContentImage.image = UIImage(named:"\(ImageUrl)")
-        tableCell.SyContentTitle.text = dataGroup["title"] as? String
-        tableCell.SyContentTime.text = dataGroup["time"] as? String
- 
+        tableCell.syContentImage.image = UIImage(named:"\(ImageUrl)")
+        tableCell.syContentTitle.text = dataGroup["title"] as? String
+        tableCell.syContentTime.text = dataGroup["time"] as? String
+        tableCell.syContentSource.text = dataGroup["source"] as? String
 
+ 
         return tableCell
         
     }
     
     
-    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        
-        return 100
-    }
-
+ 
     
      override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
@@ -101,11 +102,11 @@ class SyViewController: UITableViewController{
         let dataRow = indexPath.row + 1
         let dataGroup = data["\(dataRow)"] as! NSDictionary
         
-        SendUrl = dataGroup["url"] as! NSString
-        SendTitle = dataGroup["title"] as! NSString
-        SendImage = dataGroup["image"] as! NSString
+        sendUrl = dataGroup["url"] as! NSString
+        sendTitle = dataGroup["title"] as! NSString
+        sendImage = dataGroup["image"] as! NSString
         
-        
+        tableView .deselectRowAtIndexPath(indexPath, animated: true)
     
        // let goDetailContent = DetailViewController()
         
@@ -126,9 +127,9 @@ class SyViewController: UITableViewController{
                     
                     let goDetailContent = segue.destinationViewController as! DetailViewController
                    
-                    goDetailContent.ReceiveUrl = SendUrl
-                    goDetailContent.ReceiveTitle = SendTitle
-                    goDetailContent.ReceiveImage = SendImage
+                    goDetailContent.ReceiveUrl = sendUrl
+                    goDetailContent.ReceiveTitle = sendTitle
+                    goDetailContent.ReceiveImage = sendImage
                     
 
                 }
@@ -139,9 +140,9 @@ class SyViewController: UITableViewController{
     //下拉刷新
     func refresh() {
         
-            if self.PullRefreshControl.refreshing == true {
+            if self.pullRefreshControl.refreshing == true {
     
-            self.PullRefreshControl.attributedTitle = NSAttributedString(string: "Loading...")
+            self.pullRefreshControl.attributedTitle = NSAttributedString(string: "Loading...")
                      }
         
             dispatch_async(dispatch_get_global_queue(0, 0), { () -> Void in
@@ -152,9 +153,9 @@ class SyViewController: UITableViewController{
                 
                                  sleep(1)
             
-            self.PullRefreshControl.endRefreshing()
+            self.pullRefreshControl.endRefreshing()
             
-            self.PullRefreshControl.attributedTitle = NSAttributedString(string: "Pull To Refresh")
+            self.pullRefreshControl.attributedTitle = NSAttributedString(string: "Pull To Refresh")
                 
             self.tableView.reloadData()
                 

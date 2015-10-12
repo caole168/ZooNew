@@ -77,8 +77,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="wsJ-U5-Hpp">
                         <barButtonItem key="rightBarButtonItem" width="1" style="plain" id="BuJ-Im-pWZ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xBN-i7-IE3">
-                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xBN-i7-IE3">
+                                <rect key="frame" x="550" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="分享"/>
                                 <connections>
