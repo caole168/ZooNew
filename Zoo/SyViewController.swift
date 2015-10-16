@@ -74,6 +74,7 @@ class SyViewController: UITableViewController{
    
         
         tableView.rowHeight = 270
+        
     //    tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         //加载数据
         let dataRow = indexPath.row + 1 //数组元素从1开始的，所以+1 ，indexPath默认为0
