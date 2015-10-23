@@ -48,16 +48,16 @@ class SyTableViewCell: UITableViewCell {
         
         }
         
-        
+
         
         if Screen.width == 375.0{
             
-            syContentImage.frame = CGRectMake(26,22,ScreenWidth-48,180) //  iphone 6  331*180
-            syContentTitle.frame = CGRectMake(26,200, ScreenWidth-48,50)
-            syContentTime.frame  = CGRectMake(320, 245, 100, 20)
-            syContentSource.frame = CGRectMake(26, 245, 100, 20)
+            syContentImage.frame = CGRectMake(235,0,140,95) //  iphone 6  331*180
+            syContentTitle.frame = CGRectMake(10,20, 210,50)
+            syContentTime.frame  = CGRectMake(190, 70, 100, 20)
+            syContentSource.frame = CGRectMake(10, 70, 100, 20)
             
-            
+            syContentTitle.font     = UIFont(name:"Arial", size: 15)
             syContentSource.font    = UIFont(name:"Arial", size: 10)
             syContentTime.font      = UIFont(name: "Arial", size: 10)
             syContentSource.textColor = UIColor.grayColor()

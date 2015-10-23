@@ -166,8 +166,8 @@
 			children = (
 				5E4C69411B982B9E00F3468C /* AppDelegate.swift */,
 				B3EBB0B31B9919360050B177 /* Main.storyboard */,
-				B3EBB0B91B9919920050B177 /* SyCellClass.swift */,
 				B3EBB0B51B99194B0050B177 /* SyViewController.swift */,
+				B3EBB0B91B9919920050B177 /* SyCellClass.swift */,
 				B3EBB0CC1B99236E0050B177 /* DetailViewController.swift */,
 				5E27FD9B1BBD2FF200EAF4FC /* ShareViewController.swift */,
 				5E4C69481B982B9E00F3468C /* Images.xcassets */,

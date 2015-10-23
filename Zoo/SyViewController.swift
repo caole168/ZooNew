@@ -73,7 +73,7 @@ class SyViewController: UITableViewController{
         let tableCell : SyTableViewCell = tableView.dequeueReusableCellWithIdentifier("SyCell", forIndexPath: indexPath) as! SyTableViewCell
    
         
-        tableView.rowHeight = 270
+        tableView.rowHeight = 95
         
     //    tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         //加载数据
