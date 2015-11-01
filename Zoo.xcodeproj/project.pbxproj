@@ -14,21 +14,22 @@
 		5E27FD891BBCD89A00EAF4FC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E86FCC31BB5539900363197 /* libz.tbd */; };
 		5E27FD8B1BBCD8A600EAF4FC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E27FD8A1BBCD8A600EAF4FC /* libc++.tbd */; };
 		5E27FD8D1BBCDE1100EAF4FC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E27FD8C1BBCDE1100EAF4FC /* CoreTelephony.framework */; };
-		5E27FD921BBD2BE800EAF4FC /* wechat_icon_1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD8F1BBD2BE800EAF4FC /* wechat_icon_1x.png */; settings = {ASSET_TAGS = (); }; };
-		5E27FD931BBD2BE800EAF4FC /* wechat_icon_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD901BBD2BE800EAF4FC /* wechat_icon_2x.png */; settings = {ASSET_TAGS = (); }; };
-		5E27FD941BBD2BE800EAF4FC /* wechat_icon_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD911BBD2BE800EAF4FC /* wechat_icon_3x.png */; settings = {ASSET_TAGS = (); }; };
-		5E27FD981BBD2C3100EAF4FC /* wechat_moments_icon_1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD951BBD2C3100EAF4FC /* wechat_moments_icon_1x.png */; settings = {ASSET_TAGS = (); }; };
-		5E27FD991BBD2C3100EAF4FC /* wechat_moments_icon_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD961BBD2C3100EAF4FC /* wechat_moments_icon_2x.png */; settings = {ASSET_TAGS = (); }; };
-		5E27FD9A1BBD2C3100EAF4FC /* wechat_moments_icon_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD971BBD2C3100EAF4FC /* wechat_moments_icon_3x.png */; settings = {ASSET_TAGS = (); }; };
-		5E27FD9C1BBD2FF200EAF4FC /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E27FD9B1BBD2FF200EAF4FC /* ShareViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5E27FD921BBD2BE800EAF4FC /* wechat_icon_1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD8F1BBD2BE800EAF4FC /* wechat_icon_1x.png */; };
+		5E27FD931BBD2BE800EAF4FC /* wechat_icon_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD901BBD2BE800EAF4FC /* wechat_icon_2x.png */; };
+		5E27FD941BBD2BE800EAF4FC /* wechat_icon_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD911BBD2BE800EAF4FC /* wechat_icon_3x.png */; };
+		5E27FD981BBD2C3100EAF4FC /* wechat_moments_icon_1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD951BBD2C3100EAF4FC /* wechat_moments_icon_1x.png */; };
+		5E27FD991BBD2C3100EAF4FC /* wechat_moments_icon_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD961BBD2C3100EAF4FC /* wechat_moments_icon_2x.png */; };
+		5E27FD9A1BBD2C3100EAF4FC /* wechat_moments_icon_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E27FD971BBD2C3100EAF4FC /* wechat_moments_icon_3x.png */; };
+		5E27FD9C1BBD2FF200EAF4FC /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E27FD9B1BBD2FF200EAF4FC /* ShareViewController.swift */; };
 		5E4C69421B982B9E00F3468C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C69411B982B9E00F3468C /* AppDelegate.swift */; };
 		5E4C69491B982B9E00F3468C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C69481B982B9E00F3468C /* Images.xcassets */; };
 		5E4C694C1B982B9E00F3468C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E4C694A1B982B9E00F3468C /* LaunchScreen.xib */; };
 		5E4C69581B982B9E00F3468C /* ZooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C69571B982B9E00F3468C /* ZooTests.swift */; };
-		5E6CE5FE1BB3C140008528BB /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5E6CE5FA1BB3C140008528BB /* read_me.txt */; settings = {ASSET_TAGS = (); }; };
+		5E6CE5FE1BB3C140008528BB /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5E6CE5FA1BB3C140008528BB /* read_me.txt */; };
 		5E86FCBE1BB5533200363197 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E86FCBD1BB5533200363197 /* SystemConfiguration.framework */; };
 		5E86FCC81BB553D400363197 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E86FCC71BB553D400363197 /* UIKit.framework */; };
 		B32642421B9A673400012C4E /* 屏幕尺寸 in Resources */ = {isa = PBXBuildFile; fileRef = B32642411B9A673400012C4E /* 屏幕尺寸 */; };
+		B3524CD21BE4A4C000845ADB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3524CD11BE4A4C000845ADB /* CoreData.framework */; };
 		B3EBB0B41B9919360050B177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3EBB0B31B9919360050B177 /* Main.storyboard */; };
 		B3EBB0B61B99194B0050B177 /* SyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EBB0B51B99194B0050B177 /* SyViewController.swift */; };
 		B3EBB0B81B9919890050B177 /* SyPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3EBB0B71B9919890050B177 /* SyPlist.plist */; };
@@ -40,6 +41,10 @@
 		B3EBB0C81B991A3B0050B177 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3EBB0C31B991A3B0050B177 /* 3.jpeg */; };
 		B3EBB0CB1B991C040050B177 /* 0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3EBB0CA1B991C040050B177 /* 0.jpeg */; };
 		B3EBB0CD1B99236E0050B177 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EBB0CC1B99236E0050B177 /* DetailViewController.swift */; };
+		B3F4A3011BE4A8EE002876E2 /* Entity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4A2FF1BE4A8EE002876E2 /* Entity+CoreDataProperties.swift */; };
+		B3F4A3021BE4A8EE002876E2 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4A3001BE4A8EE002876E2 /* Entity.swift */; };
+		B3F4A30D1BE4C5CA002876E2 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4A30C1BE4C5CA002876E2 /* CoreDataHelper.swift */; };
+		B3F4A3111BE4CB09002876E2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3F4A30F1BE4CB09002876E2 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +87,7 @@
 		5E86FCC71BB553D400363197 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5E86FCC91BB553EC00363197 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B32642411B9A673400012C4E /* 屏幕尺寸 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "屏幕尺寸"; sourceTree = "<group>"; };
+		B3524CD11BE4A4C000845ADB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B3EBB0B31B9919360050B177 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B3EBB0B51B99194B0050B177 /* SyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyViewController.swift; sourceTree = "<group>"; };
 		B3EBB0B71B9919890050B177 /* SyPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SyPlist.plist; sourceTree = "<group>"; };
@@ -93,6 +99,10 @@
 		B3EBB0C31B991A3B0050B177 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
 		B3EBB0CA1B991C040050B177 /* 0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpeg; sourceTree = "<group>"; };
 		B3EBB0CC1B99236E0050B177 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B3F4A2FF1BE4A8EE002876E2 /* Entity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Entity+CoreDataProperties.swift"; path = "Zoo/CoreDataClass/Entity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B3F4A3001BE4A8EE002876E2 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = Zoo/CoreDataClass/Entity.swift; sourceTree = "<group>"; };
+		B3F4A30C1BE4C5CA002876E2 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		B3F4A3101BE4CB09002876E2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3524CD21BE4A4C000845ADB /* CoreData.framework in Frameworks */,
 				5E27FD8D1BBCDE1100EAF4FC /* CoreTelephony.framework in Frameworks */,
 				5E27FD8B1BBCD8A600EAF4FC /* libc++.tbd in Frameworks */,
 				5E27FD891BBCD89A00EAF4FC /* libz.tbd in Frameworks */,
@@ -138,6 +149,7 @@
 		5E4C69331B982B9E00F3468C = {
 			isa = PBXGroup;
 			children = (
+				B3524CD11BE4A4C000845ADB /* CoreData.framework */,
 				5E27FD8C1BBCDE1100EAF4FC /* CoreTelephony.framework */,
 				5E27FD8A1BBCD8A600EAF4FC /* libc++.tbd */,
 				5E27FD861BBCD84100EAF4FC /* libsqlite3.tbd */,
@@ -172,6 +184,7 @@
 				5E27FD9B1BBD2FF200EAF4FC /* ShareViewController.swift */,
 				5E4C69481B982B9E00F3468C /* Images.xcassets */,
 				5E4C694A1B982B9E00F3468C /* LaunchScreen.xib */,
+				B3F4A3031BE4A950002876E2 /* CoreData */,
 				5E4C693F1B982B9E00F3468C /* Supporting Files */,
 				5E4C69541B982B9E00F3468C /* ZooTests */,
 			);
@@ -230,6 +243,18 @@
 				B3EBB0C01B991A3B0050B177 /* 4.jpeg */,
 			);
 			path = test;
+			sourceTree = "<group>";
+		};
+		B3F4A3031BE4A950002876E2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B3F4A2FF1BE4A8EE002876E2 /* Entity+CoreDataProperties.swift */,
+				B3F4A3001BE4A8EE002876E2 /* Entity.swift */,
+				B3F4A30C1BE4C5CA002876E2 /* CoreDataHelper.swift */,
+				B3F4A30F1BE4CB09002876E2 /* Model.xcdatamodeld */,
+			);
+			name = CoreData;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,7 +376,11 @@
 			files = (
 				B3EBB0B61B99194B0050B177 /* SyViewController.swift in Sources */,
 				B3EBB0BA1B9919920050B177 /* SyCellClass.swift in Sources */,
+				B3F4A3011BE4A8EE002876E2 /* Entity+CoreDataProperties.swift in Sources */,
+				B3F4A3021BE4A8EE002876E2 /* Entity.swift in Sources */,
 				5E4C69421B982B9E00F3468C /* AppDelegate.swift in Sources */,
+				B3F4A3111BE4CB09002876E2 /* Model.xcdatamodeld in Sources */,
+				B3F4A30D1BE4C5CA002876E2 /* CoreDataHelper.swift in Sources */,
 				B3EBB0CD1B99236E0050B177 /* DetailViewController.swift in Sources */,
 				5E27FD9C1BBD2FF200EAF4FC /* ShareViewController.swift in Sources */,
 			);
@@ -572,6 +601,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B3F4A30F1BE4CB09002876E2 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B3F4A3101BE4CB09002876E2 /* Model.xcdatamodel */,
+			);
+			currentVersion = B3F4A3101BE4CB09002876E2 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5E4C69341B982B9E00F3468C /* Project object */;
 }

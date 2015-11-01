@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 
 class DetailViewController: UIViewController,UIWebViewDelegate {
@@ -19,10 +21,10 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
     var PageTitle:NSString!
     let Screen = UIScreen.mainScreen().bounds
     var loadImage = UIActivityIndicatorView()
-    
+    let appDel = UIApplication.sharedApplication().delegate as! AppDelegate //获取appdel
+ //   let coredataHelper = CoreDataHelper()
     
     @IBOutlet weak var WebView: UIWebView!
-    
     
     @IBAction func sharButton(sender: AnyObject) {
 
@@ -48,9 +50,45 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
         presentViewController(ShareController, animated: true, completion: nil)
         
         
-        
     }
-
+    
+    
+    @IBAction func collectionButton(sender: AnyObject) {
+        
+        
+        
+        let context = appDel.managedObjectContext
+            let favorite = NSEntityDescription.insertNewObjectForEntityForName("Entity", inManagedObjectContext: context) as! Entity
+            
+            favorite.title = "12312"
+        appDel.saveContext()
+            
+        }
+        
+        
+//        var context = appDel.managedObjectContext //获取存储的上下文
+//        
+//        let favorite = NSEntityDescription.insertNewObjectForEntityForName("Entity", inManagedObjectContext: context) as! Entity
+//
+////
+////        favorite.title = ReceiveTitle as String
+////        favorite.url = ReceiveUrl as String
+////        favorite.image = ReceiveImage as String
+////        
+//
+//        favorite.title = "qweqw"
+//        favorite.url = "q12e"
+//        favorite.image = "1233"
+//        
+//        do{
+//            try context.save()
+//        }catch {
+//            print("12")
+//            
+//        }
+        
+    
+    
 
     
 
@@ -58,7 +96,7 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+    
         
         self.navigationItem.title = "\(ReceiveTitle)"
       //  self.navigationItem.
@@ -87,7 +125,7 @@ class DetailViewController: UIViewController,UIWebViewDelegate {
 
     
     func webViewDidStartLoad(webView: UIWebView){
-        
+        print("_____________________")
         let Screen = UIScreen.mainScreen().bounds
         let ScreenWidth = Screen.width
         let ScreenHeight = Screen.height
